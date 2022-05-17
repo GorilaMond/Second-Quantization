@@ -1,4 +1,4 @@
-using LinearAlgebra
+using LinearAlgebra, PyPlot
 
 "
 A struct for Hamiltonian and its parameters.
