@@ -131,7 +131,7 @@ function H!(this::SecondQuantizationSystem, LR::Matrix, NLR::Matrix)
     for i = 1:WP, j = 1:WP
         Ĥ += LR[i,j]*â⁺â[i,j]
         if i == j
-            Ĥ += NLR[i,i]*(n̂[i]*(n̂[i].-1))/2
+            Ĥ += NLR[i,i]*(n̂[i]*(n̂[i]-I))/2
         else
             Ĥ += NLR[i,j]*(n̂[i]*n̂[j])/2
         end
